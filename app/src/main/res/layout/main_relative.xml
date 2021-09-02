@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/TitleTXT"
         android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="64sp"
+        android:layout_marginTop="50dp"
         android:text="IMC"
         android:textColor="@color/verde_700"
         android:textStyle="bold"
@@ -21,6 +19,8 @@
 
     <EditText
         android:id="@+id/PesoEDT"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/TitleTXT"
         android:layout_marginTop="36sp"
         android:layout_marginHorizontal="64sp"
         android:layout_width="match_parent"
@@ -33,19 +33,22 @@
 
     <EditText
         android:id="@+id/AlturaEDT"
+        android:layout_below="@id/PesoEDT"
+        android:layout_marginTop="50sp"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_marginHorizontal="64sp"
-        android:layout_marginTop="36sp"
         android:hint="@string/altura_ex_1_75"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         android:textColor="@color/verde_700"
-        android:inputType="numberDecimal"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/calcularBTN"
-        android:layout_marginTop="36sp"
+        android:layout_below="@id/AlturaEDT"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80sp"
         android:layout_marginHorizontal="64sp"
         android:layout_width="240sp"
         android:layout_height="50sp"
@@ -55,4 +58,4 @@
         android:text="Calcular " />
 
 
-</LinearLayout>
+</RelativeLayout>
